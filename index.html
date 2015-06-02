@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset='utf-8'/>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="main.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_nXetLhEpQWnj87rI0URX6VoFGl-RmAU"></script>
+</head>
+<body>
+	<!--**********-->
+	<!-- Tracks   -->
+	<!--**********-->
+	<div data-role="page" id="tracks">
+		<div data-role="main" class="ui-content">
+			<h2>Välj spår</h2>
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Sök spår..." data-inset="true">
+				<li><a href="#skolrundan" data-transition="slide" >Skolrundan</a></li>
+				<li><a href="#vibyeljusspar" data-transition="slide" >Viby Eljusspår</a></li>
+				<li><a href="#arstarundan" data-transition="slide" >Årsta Rundan</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#tracks" class="ui-btn ui-icon-location ui-btn-icon-top">Spår</a></li>
+					<li><a href="#shop" class="ui-btn ui-icon-shop ui-btn-icon-top">Affär</a></li>
+					<li><a href="#profile" class="ui-btn ui-icon-user ui-btn-icon-top">Profil</a></li>
+					<li><a href="#friends" class="ui-btn ui-icon-heart ui-btn-icon-top">Vänner</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--**********-->
+	<!-- /Tracks  -->
+	<!--**********-->
+	<!-- Skolrundan -->
+	<div data-role="page" id="skolrundan">
+		<div data-role="header" data-position="fixed">
+			<a href="#tracks" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-btn-icon-notext ui-corner-all"></a>
+		</div>
+		<div data-role="main" class="ui-content">
+			<h2>Skolrundan</h2>
+			<div id="skolrundan-map" class="map"></div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#tracks" class="ui-btn ui-icon-location ui-btn-icon-top">Spår</a></li>
+					<li><a href="#shop" class="ui-btn ui-icon-shop ui-btn-icon-top">Affär</a></li>
+					<li><a href="#profile" class="ui-btn ui-icon-user ui-btn-icon-top">Profil</a></li>
+					<li><a href="#friends" class="ui-btn ui-icon-heart ui-btn-icon-top">Vänner</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /Skolrundan -->
+	<!-- Vibyeljusspår -->
+	<div data-role="page" id="vibyeljusspar">
+		<div data-role="header" data-position="fixed">
+			<a href="#tracks" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-btn-icon-notext ui-corner-all"></a>
+		</div>
+		<div data-role="main" class="ui-content">
+			<h2>Viby Eljusspår</h2>
+			<div id="vibyeljusspar-map" class="map"></div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#tracks" class="ui-btn ui-icon-location ui-btn-icon-top">Spår</a></li>
+					<li><a href="#shop" class="ui-btn ui-icon-shop ui-btn-icon-top">Affär</a></li>
+					<li><a href="#profile" class="ui-btn ui-icon-user ui-btn-icon-top">Profil</a></li>
+					<li><a href="#friends" class="ui-btn ui-icon-heart ui-btn-icon-top">Vänner</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /Vibyeljusspår -->
+	<!-- Årstarundan -->
+	<div data-role="page" id="arstarundan">
+		<div data-role="header" data-position="fixed">
+			<a href="#tracks" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-btn-icon-notext ui-corner-all"></a>
+		</div>
+		<div data-role="main" class="ui-content">
+			<h2>Årsta Rundan</h2>
+			<div id="arstarundan-map" class="map"></div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#tracks" class="ui-btn ui-icon-location ui-btn-icon-top">Spår</a></li>
+					<li><a href="#shop" class="ui-btn ui-icon-shop ui-btn-icon-top">Affär</a></li>
+					<li><a href="#profile" class="ui-btn ui-icon-user ui-btn-icon-top">Profil</a></li>
+					<li><a href="#friends" class="ui-btn ui-icon-heart ui-btn-icon-top">Vänner</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /Årstarundan -->
+	<!--**********-->
+	<!--   Shop   -->
+	<!--**********-->
+	<div data-role="page" id="shop">
+		<div data-role="main" class="ui-content">
+			<p>Affär</p>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#tracks" class="ui-btn ui-icon-location ui-btn-icon-top">Spår</a></li>
+					<li><a href="#shop" class="ui-btn ui-icon-shop ui-btn-icon-top">Affär</a></li>
+					<li><a href="#profile" class="ui-btn ui-icon-user ui-btn-icon-top">Profil</a></li>
+					<li><a href="#friends" class="ui-btn ui-icon-heart ui-btn-icon-top">Vänner</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--**********-->
+	<!--   /Shop  -->
+	<!--**********-->
+	<!--**********-->
+	<!-- Profile  -->
+	<!--**********-->
+	<div data-role="page" id="profile">
+		<div data-role="main" class="ui-content">
+			<p>Profil</p>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#tracks" class="ui-btn ui-icon-location ui-btn-icon-top">Spår</a></li>
+					<li><a href="#shop" class="ui-btn ui-icon-shop ui-btn-icon-top">Affär</a></li>
+					<li><a href="#profile" class="ui-btn ui-icon-user ui-btn-icon-top">Profil</a></li>
+					<li><a href="#friends" class="ui-btn ui-icon-heart ui-btn-icon-top">Vänner</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--**********-->
+	<!-- /Profile -->
+	<!--**********-->
+	<!--**********-->
+	<!-- Friends  -->
+	<!--**********-->
+	<div data-role="page" id="friends">
+		<div data-role="main" class="ui-content">
+			<p>Vänner</p>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#tracks" class="ui-btn ui-icon-location ui-btn-icon-top">Spår</a></li>
+					<li><a href="#shop" class="ui-btn ui-icon-shop ui-btn-icon-top">Affär</a></li>
+					<li><a href="#profile" class="ui-btn ui-icon-user ui-btn-icon-top">Profil</a></li>
+					<li><a href="#friends" class="ui-btn ui-icon-heart ui-btn-icon-top">Vänner</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--**********-->
+	<!-- /Friends -->
+	<!--**********-->
+</body>
+</html>
